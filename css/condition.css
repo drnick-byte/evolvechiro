@@ -1,0 +1,173 @@
+/* ============================================================
+   CONDITION PAGE STYLES
+   ============================================================ */
+
+.condition-hero { padding-bottom: var(--space-16); }
+
+/* Trust Bar */
+.trust-bar {
+  background: var(--secondary);
+  border-bottom: 1px solid var(--secondary-dark);
+  padding: var(--space-6) 0;
+}
+.trust-bar-inner {
+  display: flex;
+  align-items: center;
+  gap: var(--space-8);
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.trust-bar-item {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  text-align: center;
+}
+.trust-bar-item strong {
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--dark);
+}
+.trust-bar-item span {
+  font-size: var(--text-xs);
+  color: var(--slate);
+}
+.trust-bar-divider {
+  width: 1px;
+  height: 36px;
+  background: var(--secondary-dark);
+  flex-shrink: 0;
+}
+
+/* Callout Box */
+.callout-box {
+  background: var(--secondary);
+  border-left: 3px solid var(--primary);
+  padding: var(--space-6) var(--space-8);
+  margin: var(--space-8) 0;
+  border-radius: 0 var(--radius) var(--radius) 0;
+}
+.callout-label {
+  font-size: var(--text-xs);
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--primary-dark);
+  margin-bottom: var(--space-4);
+}
+.callout-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-2) var(--space-8);
+}
+.callout-list li {
+  font-size: var(--text-sm);
+  color: var(--slate);
+  padding-left: var(--space-4);
+  position: relative;
+  margin-bottom: 0;
+}
+.callout-list li::before {
+  content: '—';
+  position: absolute;
+  left: 0;
+  color: var(--primary);
+  font-size: 0.75em;
+  top: 3px;
+}
+
+/* Symptom Grid */
+.symptom-grid { margin: var(--space-6) 0 var(--space-8); }
+.symptom-card {
+  background: var(--dark);
+  padding: var(--space-8);
+  border-top: 3px solid var(--primary);
+}
+.symptom-card h4 {
+  font-family: var(--font-display);
+  font-size: var(--text-lg);
+  color: var(--white);
+  margin-bottom: var(--space-4);
+}
+.symptom-card ul { list-style: none; padding: 0; margin: 0; }
+.symptom-card li {
+  font-size: var(--text-sm);
+  color: var(--secondary);
+  opacity: 0.85;
+  padding: var(--space-2) 0;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+  padding-left: var(--space-6);
+  position: relative;
+  margin-bottom: 0;
+}
+.symptom-card li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: var(--primary-light);
+  font-weight: 600;
+}
+.symptom-card li:last-child { border-bottom: none; }
+
+/* Treatment Steps */
+.treatment-steps {
+  margin: var(--space-8) 0;
+  display: flex;
+  flex-direction: column;
+}
+.treatment-step {
+  display: flex;
+  gap: var(--space-6);
+  align-items: flex-start;
+  padding: var(--space-6) 0;
+  border-bottom: 1px solid var(--secondary);
+}
+.treatment-step:last-child { border-bottom: none; }
+.step-num {
+  font-family: var(--font-display);
+  font-size: var(--text-2xl);
+  font-weight: 700;
+  color: var(--primary);
+  opacity: 0.4;
+  flex-shrink: 0;
+  width: 48px;
+  line-height: 1;
+  padding-top: 4px;
+}
+.step-content h3 {
+  font-family: var(--font-display);
+  font-size: var(--text-xl);
+  color: var(--dark);
+  margin-bottom: var(--space-2);
+  margin-top: 0;
+}
+.step-content p {
+  font-size: var(--text-base);
+  color: var(--slate);
+  line-height: 1.75;
+  margin-bottom: 0;
+}
+
+/* Condition Testimonials */
+.condition-testimonials {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-6);
+  margin-top: var(--space-8);
+}
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media (max-width: 768px) {
+  .trust-bar-inner  { gap: var(--space-4); }
+  .trust-bar-divider { display: none; }
+  .callout-list     { grid-template-columns: 1fr; }
+  .condition-testimonials { grid-template-columns: 1fr; }
+}
+@media (max-width: 640px) {
+  .faq-question { font-size: var(--text-base); }
+}
