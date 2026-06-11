@@ -163,7 +163,7 @@ a { color: inherit; text-decoration: none; }
 .dropdown-menu {
   display: none;
   position: absolute;
-  top: calc(100% + 12px);
+  top: calc(100% + 0px);
   left: 50%;
   transform: translateX(-50%);
   background: var(--primary-dark);
